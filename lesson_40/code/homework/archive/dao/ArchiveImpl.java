@@ -10,7 +10,7 @@ public class ArchiveImpl implements Archive {
     //static
     static Comparator<Document> comparator = (d1, d2) -> {
         int res = d1.getDate().compareTo(d2.getDate()); //сортировка по датам
-        return res != 0 ? res : Integer.compare(d1.getPhotoId(), d2.getPhotoId()); //если даты совпали, то сортировка по айди
+        return res != 0 ? res : Integer.compare(d1.getIdDocument(), d2.getIdDocument()); //если даты совпали, то сортировка по айди
     };
     //fields
     private Document[] documents;
