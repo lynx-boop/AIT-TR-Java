@@ -14,7 +14,7 @@ class LibraryImplTest {
     @BeforeEach
     void setUp() {
         library = new LibraryImpl(5);
-        Book[] books = new Book[4];
+        books = new Book[4];
         books[0] = new Book(100, "Autor0", "Name0", 2000);
         books[1] = new Book(101, "Autor1", "Name1", 2005);
         books[2] = new Book(102, "Autor2", "Name2", 2010);
@@ -44,7 +44,7 @@ class LibraryImplTest {
         // удаляем книгу
         assertEquals(books[1], library.deleteBook(101));
         // проверяем, присутствует ли эта книга после удаления
-        assertEquals(2, library.booksQuantity());
+        assertEquals(3, library.booksQuantity());
         // проверяем на удаление дважды
         assertNull(library.deleteBook(101));
     }
