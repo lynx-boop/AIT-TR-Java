@@ -3,10 +3,10 @@ package computer.model;
 import practice.computer.model.Computer21;
 
 public class Computer {
-    protected String cpu;
-    protected int ram;
-    protected int ssd;
-    protected String brand;
+    private String cpu;
+    private int ram;
+    private int ssd;
+    private String brand;
 
     public Computer() {
         super();
@@ -65,6 +65,6 @@ public class Computer {
             return false;
         }
         Computer21 other = (Computer21) object;
-        return cpu.equals(other.cpu) && ram == other.ram && ssd == other.ssd && brand.equals(other.brand);
+        return cpu.equals(other.getCpu()) && ram == other.getRam() && ssd == other.getSsd() && brand.equals(other.getBrand());
     }
 }

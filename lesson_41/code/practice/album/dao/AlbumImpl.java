@@ -1,5 +1,6 @@
 package practice.album.dao;
 
+import homework.archive.model.Document;
 import practice.album.model.Photo;
 
 import java.time.LocalDate;
@@ -96,8 +97,14 @@ public class AlbumImpl implements Album{
 
     @Override
     public Photo[] getPhotoBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
-
-        return new Photo[0];
+//        Photo[] photoArray = new Photo[size];
+//        int j = 0;
+//        for (int i = 0; i < size; i++) {
+//            if (dateFrom.isAfter(photos[i].getDate()) && dateTo.isBefore(documents[i].getDate())) {
+//                photoArray[j] = photos[i];
+//            }
+//        }
+        return null;
     }
 
     @Override
