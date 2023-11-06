@@ -1,5 +1,6 @@
 package homework.archive.model;
 
+import javax.print.Doc;
 import java.time.LocalDate;
 import java.util.Comparator;
 
@@ -19,6 +20,10 @@ public class Document implements Comparable<Document> {
         this.url = url;
         this.date = date;
     }
+    public Document(int idFolder, int idDocument){
+        this.idFolder = idFolder;
+        this.idDocument = idDocument;
+    };
 
     //getters and setters
 

@@ -1,7 +1,6 @@
 package homework.archive.dao;
 
 import homework.archive.model.Document;
-import practice.album.model.Photo;
 
 import java.time.LocalDate;
 import java.util.Comparator;
@@ -23,11 +22,16 @@ public class ArchiveImpl implements Archive {
     //methods
     @Override
     public boolean addDocument(Document document) {
+        if (document == null || size == documents.length || getDocument(document.getIdFolder(), document.getIdDocument()) != null) {
+            documents[size++] = document;
+        }
+
         return false;
     }
 
     @Override
-    public boolean updateDocument(Document document) {
+    public boolean updateDocument(int documentId, int folderId, String url) {
+//        Document document = new Document(documentId, folderId);
         return false;
     }
 
